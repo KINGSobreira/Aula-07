@@ -1,4 +1,70 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+
+}
+
+* {
+    margin: 0;
     
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: var(--line-height-normal);
+    --webkit-font-smoothing: antialiased; /* Suaviza a fonte nos navagadores mais comuns */
+    -moz-osx-font-smoothing: grayscale; /* Suaviza a fonte pro mozila e pro sistema Apple */
+    text-rendering: optimizeLegibility; /* Melhora a renderização do texto, em várias ocasiões */
+    font-synthesis: none; /* Qualquer fonte que eu traga para o site, vai forçar a manter todos os estilos dela, como acentuação
+    e entre outras particularidades da fonte */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block; /* Vai sempre permitir que eles sejam visíveis */
+    max-width: 100%; /*  */
+
+}
+
+input,
+button,
+textarea,
+select {
+        font: inherit; /* Herda sempre a mesma fonte que eu herdar pra um texto principal */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word; /* Quebra a palavra de forma automática */
+}
+
+#root,
+#__next {
+    isolation: isolate; /* Cria um contexto de empilhamento */ /* Ajuda também em ul e li */
+}
+
+ul [role='list'],
+ol [role='list'] {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth; /*Suaviza a animação de ancoragem da navegação dentro da página */
+}
+
+body {
+    min-height: 100vh;
 }
